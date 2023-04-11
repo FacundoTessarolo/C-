@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+double sumar(double a, double b) {
+  return a + b;
+}
+
+double restar(double a, double b) {
+  return a - b;
+}
+
+double multiplicar(double a, double b) {
+  return a * b;
+}
+
+double dividir(double a, double b) {
+  return a / b;
+}
+
+int main() {
+  double num1, num2, resultado;
+
+  cout << "Ingrese el primer número: ";
+  cin >> num1;
+
+  cout << "Ingrese el segundo número: ";
+  cin >> num2;
+
+  cout << "Ingrese la operación que desea realizar (+, -, *, /): ";
+  char operacion;
+  cin >> operacion;
+
+  switch (operacion) {
+    case '+':
+      resultado = sumar(num1, num2);
+      break;
+    case '-':
+      resultado = restar(num1, num2);
+      break;
+    case '*':
+      resultado = multiplicar(num1, num2);
+      break;
+    case '/':
+      resultado = dividir(num1, num2);
+      break;
+    default:
+      cout << "Operación inválida" << endl;
+      return 0;
+  }
+
+  cout << "El resultado es: " << resultado << endl;
+  return 0;
+}
